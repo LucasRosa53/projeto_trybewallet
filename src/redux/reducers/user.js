@@ -10,7 +10,7 @@ const emailReducer = (state = INITTIAL_STATE, action) => {
   case ADD_EMAIL:
     return {
       ...state,
-      email: action.email,
+      email: action.payload,
     };
   default:
     return state;
