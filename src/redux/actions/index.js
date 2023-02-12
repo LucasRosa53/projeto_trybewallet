@@ -1,5 +1,6 @@
 export const ADD_EMAIL = 'ADD_EMAIL';
 export const CURRENCIES = 'CURRENCIES';
+export const ADD_INFO = 'ADD_INFO';
 
 export const addEmail = (email) => ({
   type: ADD_EMAIL,
@@ -9,6 +10,11 @@ export const addEmail = (email) => ({
 export const novoCurrencies = (moeda) => ({
   type: CURRENCIES,
   payload: moeda,
+});
+
+export const addInfo = (infos) => ({
+  type: ADD_INFO,
+  payload: infos,
 });
 
 const getChamadaApi = () => async (dispatch) => {
