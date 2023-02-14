@@ -1,6 +1,12 @@
 export const ADD_EMAIL = 'ADD_EMAIL';
 export const CURRENCIES = 'CURRENCIES';
 export const ADD_INFO = 'ADD_INFO';
+export const EXCLUIR = 'EXCLUIR';
+
+export const excluir = (expenses) => ({
+  type: EXCLUIR,
+  payload: expenses,
+});
 
 export const addEmail = (email) => ({
   type: ADD_EMAIL,

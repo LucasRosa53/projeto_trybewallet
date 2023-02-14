@@ -41,7 +41,7 @@ describe('verifica se existem dois inputs no login', () => {
     const botaoEntrar = screen.getByRole('button', { name: /entrar/i });
     expect(botaoEntrar).toBeInTheDocument();
   });
-  test('teste se ao clicar no botão de entrar é redirecionado para wallet', () => {
+  test('teste se ao clicar no botão de entrar é redirecionado para carteira', () => {
     const { history } = renderWithRouterAndRedux(<App />);
     const inputEmail = screen.getByPlaceholderText('Digite o seu email');
     userEvent.type(inputEmail, 'eemail@email.com');
@@ -53,6 +53,6 @@ describe('verifica se existem dois inputs no login', () => {
     expect(botaoEntrar).toBeInTheDocument();
     userEvent.click(botaoEntrar);
     const { pathname } = history.location;
-    expect(pathname).toBe('/wallet');
+    expect(pathname).toBe('/carteira');
   });
 });
