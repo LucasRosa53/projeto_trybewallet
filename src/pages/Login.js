@@ -15,7 +15,7 @@ class Login extends React.Component {
     const { email } = this.state;
     const { dispatch, history } = this.props;
     dispatch(addEmail(email));
-    history.push('/wallet');
+    history.push('/carteira');
   };
 
   handleChange = ({ target: { value, name } }) => {
